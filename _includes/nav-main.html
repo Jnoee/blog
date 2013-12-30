@@ -13,14 +13,22 @@
             <ul class="nav navbar-nav">
                 <li{% if page.title == "首页" %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}/index">
-                        <i class="fa fa-home"></i>首页
+                        <i class="fa fa-home"></i>&nbsp;首页
                     </a>
                 </li>
                 <li{% if page.title == "文章列表" %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}/blog-list">
-                        <i class="fa fa-list"></i>文章列表
+                        <i class="fa fa-list"></i>&nbsp;文章列表
                     </a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            	<li>
+            		<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+            	</li>
+            	<li>
+            		<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+            	</li>
             </ul>
         </nav>
     </div>

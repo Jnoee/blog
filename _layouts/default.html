@@ -6,14 +6,6 @@
     <body>
         <a class="sr-only" href="#content">Skip to main content</a>
         {% include nav-main.html %}
-        <div class="bs-header" id="content">
-            <div class="container">
-                <h1>{{ page.title }}</h1>
-                <p>
-                    {{ page.lead }}
-                </p>
-            </div>
-        </div>
         <div class="container bs-docs-container">
             <div class="row">
                 <div class="col-md-3">
@@ -42,7 +34,6 @@
         </div>
         <footer class="bs-footer" role="contentinfo">
             <div class="container">
-                {% include social-buttons.html %}
                 <p>
                     Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.
                 </p>
@@ -52,35 +43,6 @@
                 <p>
                     Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
                 </p>
-                <ul class="footer-links">
-                    <li>
-                        Currently v{{ site.current_version }}
-                    </li>
-                    <li class="muted">
-                        &middot;
-                    </li>
-                    <li>
-                        <a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a>
-                    </li>
-                    <li class="muted">
-                        &middot;
-                    </li>
-                    <li>
-                        <a href="{{ site.blog }}">Blog</a>
-                    </li>
-                    <li class="muted">
-                        &middot;
-                    </li>
-                    <li>
-                        <a href="{{ site.repo }}/issues?state=open">Issues</a>
-                    </li>
-                    <li class="muted">
-                        &middot;
-                    </li>
-                    <li>
-                        <a href="{{ site.repo }}/releases">Releases</a>
-                    </li>
-                </ul>
             </div>
         </footer>
         {% include footer.html %}
