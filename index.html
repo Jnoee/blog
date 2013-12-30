@@ -3,10 +3,12 @@ layout: default
 title: 首页
 ---
 <ul>
-  {% for post in site.posts %}
+    {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <p>
+            {{ post.excerpt }}
+        </p>
     </li>
-  {% endfor %}
+    {% endfor %}
 </ul>
