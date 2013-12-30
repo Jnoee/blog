@@ -1,12 +1,7 @@
-# Dependencies
+baseurl:          /blog
 markdown:         rdiscount
 pygments:         true
-
-# Permalinks
 permalink:        pretty
-
-# Server
-baseurl:          /blog
 exclude:
 - ".gitignore"
 - "CNAME"
@@ -14,9 +9,5 @@ exclude:
 - "LICENSE"
 - "README.md"
 
-# Custom vars
-js_jqeury:        https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
-js_bs:            https://raw.github.com/twbs/bootstrap/master/dist/js/bootstrap.min.js
-
-css_bs:           https://raw.github.com/twbs/bootstrap/master/dist/css/bootstrap.min.css
-css_bs_theme:     https://raw.github.com/twbs/bootstrap/master/dist/css/bootstrap-theme.min.css
+# 自定义全局变量
+version:          1.0.0
