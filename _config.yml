@@ -15,6 +15,10 @@ exclude:
 - "README.md"
 
 # Custom vars
+jquery_js:        https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+bs_js:            https://raw.github.com/twbs/bootstrap/master/dist/js/bootstrap.min.js
+bs_css:           https://raw.github.com/twbs/bootstrap/master/dist/css/bootstrap.min.css
+
 current_version:  3.0.3
 repo:             https://github.com/twbs/bootstrap
 
