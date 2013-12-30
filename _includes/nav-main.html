@@ -12,16 +12,14 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
                 <li{% if page.title == "首页" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/index">首页</a>
+                    <a href="{{ site.baseurl }}/index">
+                        <i class="fa fa-home"></i>首页
+                    </a>
                 </li>
                 <li{% if page.title == "文章列表" %} class="active"{% endif %}>
-                    <span class="glyphicon glyphicon-list"></span>
-                    <a href="{{ site.baseurl }}/blog-list">文章列表</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li{% if page.title == "关于" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/about">关于</a>
+                    <a href="{{ site.baseurl }}/blog-list">
+                        <i class="fa fa-list"></i>文章列表
+                    </a>
                 </li>
             </ul>
         </nav>
