@@ -7,29 +7,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{ page.base_url }}" class="navbar-brand">Bootstrap</a>
+            <a href="{{ site.baseurl }}" class="navbar-brand">Jnoee Blog</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
-                <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}getting-started">Getting started</a>
+                <li{% if page.title == "首页" %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}/index">首页</a>
                 </li>
-                <li{% if page.slug == "css" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}css">CSS</a>
-                </li>
-                <li{% if page.slug == "components" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}components">Components</a>
-                </li>
-                <li{% if page.slug == "js" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}javascript">JavaScript</a>
-                </li>
-                <li{% if page.slug == "customize" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}customize">Customize</a>
+                <li{% if page.title == "文章列表" %} class="active"{% endif %}>
+                    <span class="glyphicon glyphicon-list"></span>
+                    <a href="{{ site.baseurl }}/blog-list">文章列表</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li{% if page.slug == "about" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}about">About</a>
+                <li{% if page.title == "关于" %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}/about">关于</a>
                 </li>
             </ul>
         </nav>
