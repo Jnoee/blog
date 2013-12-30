@@ -6,17 +6,12 @@
     <body>
         <a class="sr-only" href="#content">Skip to main content</a>
         {% include nav-main.html %}
-        <div class="container bs-docs-container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="bs-sidebar hidden-print" role="complementary">
-                        <ul class="nav bs-sidenav">
-                            {% if page.layout == "default" %}
-                            {% include nav-default.html %}
-                            {% elsif page.layout == "post" %}
-                            {% include nav-post.html %}
-                            {% endif %}
-                        </ul>
+                    <div class="list-group" role="navigation">
+                    	<a href="#" class="list-group-item active">Link</a>
+                    	<a href="#" class="list-group-item">Link</a>
                     </div>
                 </div>
                 <div class="col-md-9" role="main">
