@@ -4,7 +4,6 @@
         {% include header.html %}
     </head>
     <body>
-        <a class="sr-only" href="#content">Skip to main content</a>
         {% include nav-main.html %}
         <div class="container">
         	<div class="row row-offcanvas">
@@ -16,20 +15,15 @@
         			</div>
         		</div>
         		<div class="col-xs-12 col-sm-9">
-        		    <p class="pull-right visible-xs">
-        		        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-        		    </p>
         			{{ content }}
         		</div>
         	</div>
-        	<footer class="footer">
-                <div class="container">
-                    <p>
-                        Designed by Jnoee.
-                    </p>
-                </div>
-            </footer>
         </div>
+        <footer>
+            <p>
+                Designed by Jnoee.
+            </p>
+        </footer>
         {% include footer.html %}
     </body>
 </html>
