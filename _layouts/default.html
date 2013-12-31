@@ -6,18 +6,18 @@
     <body>
         {% include nav-main.html %}
         <div class="container">
-        	<div class="row row-offcanvas">
-        		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-        			<div class="list-group">
-        				<a href="#" class="list-group-item active">Link</a>
-        				<a href="#" class="list-group-item">Link</a>
-        				<a href="#" class="list-group-item">Link</a>
-        			</div>
-        		</div>
-        		<div class="col-xs-12 col-sm-9">
-        			{{ content }}
-        		</div>
-        	</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {% if page.navId == "home" %}
+                        {% include nav-default.html %}
+                    {% elsif page.navId == "list" %}
+                        {% include nav-post.html %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-9" role="main">
+                {{ content }}
+            </div>
         </div>
         <footer>
             <div class="container">

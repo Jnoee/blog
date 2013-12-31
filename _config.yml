@@ -10,4 +10,4 @@ exclude:
 - "README.md"
 
 # 自定义全局变量
-version:          1.0.0
+name:             Jnoee Blog

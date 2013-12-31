@@ -1,5 +1,6 @@
 ---
 layout: default
+navId: list
 title: 文章列表
 ---
 #{{ page.title }}
