@@ -9,9 +9,11 @@
             <div class="row">
                 <div class="col-md-3">
                     {% if page.navId == "home" %}
-                        {% include nav-default.html %}
+                        {% include nav-home.html %}
                     {% elsif page.navId == "list" %}
-                        {% include nav-post.html %}
+                        {% include nav-list.html %}
+                    {% else %}
+                        {% include nav-view.html %}
                     {% endif %}
                 </div>
                 <div class="col-md-9" role="main">
