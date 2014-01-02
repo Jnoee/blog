@@ -24,12 +24,12 @@ title: 标签
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
     	<table class="table">
-    		<tbody>
+    		<thead>
     			<tr>
-    				<td>
-    					<h1 style="margin-top: 0px">{{ tag[0] }}</h1>
-    				</td>
+    				<th>{{ tag[0] }}</th>
     			</tr>
+    		</thead>
+    		<tbody>
     			{% for post in tag[1] %}
     			<tr>
     				<td>
