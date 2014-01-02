@@ -5,16 +5,21 @@ title: 归档
 ---
 <div class="row">
     <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-            {% for tag in site.tags %}
-            <li>
-                <a href="#{{ tag[0] }}">
-                    <span class="badge pull-right">{{ tag[1].size }}</span>
-                    <i class="fa fa-archive"></i>&nbsp;{{ tag[0] }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+    	<div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ page.title }}</h3>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+	            {% for tag in site.tags %}
+	            <li>
+	                <a href="#{{ tag[0] }}">
+	                    <span class="badge pull-right">{{ tag[1].size }}</span>
+	                    <i class="fa fa-archive"></i>&nbsp;{{ tag[0] }}
+	                </a>
+	            </li>
+	            {% endfor %}
+	        </ul>
+        </div>
     </div>
     <div class="col-md-9" role="main">
         <div class="page-header" style="margin-top: 0px">
