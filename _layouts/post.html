@@ -10,6 +10,17 @@ layout: default
         </div>
     </div>
     <div class="col-md-9" role="main">
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.date | date_to_string }}</p>
+        <p>{{ page.summary }}</p>
         {{ content }}
+        <ul class="pager">
+            {% if page.previous %}
+            <li class="previous"><a href="{{ page.previous.url }}">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a></li>
+            {% endif %}
+            {% if page.next %}
+            <li class="next"><a href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a></li>
+            {% endif %}
+        </ul>
     </div>
 </div>
