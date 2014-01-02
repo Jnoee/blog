@@ -23,17 +23,22 @@ title: 标签
     </div>
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
-    	<div class="page-header" style="margin-top: 0px">
-        	<h1 style="margin-top: 0px">{{ page.title }}</h1>
-        </div>
-        <ul>
-        	{% for post in tag[1] %}
-            <li>
-                {{ post.date | date:"%Y-%m-%d" }} --- 
-                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% endfor %}
+    	<table class="table">
+    		<tbody>
+    			<tr>
+    				<td>
+    					<h1 style="margin-top: 0px">{{ tag[0] }}</h1>
+    				</td>
+    			</tr>
+    			{% for post in tag[1] %}
+    			<tr>
+    				<td>
+    					{{ post.date | date:"%Y-%m-%d" }} --- <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    				</td>
+    			</tr>
+    			{% endfor %}
+    		</tbody>
+    	</table>
+    	{% endfor %}
     </div>
 </div>
