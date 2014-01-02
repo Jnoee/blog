@@ -23,10 +23,8 @@ title: 标签
     </div>
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
-    	<div class="page-header" style="margin-top: 0px">
-        	<h1 style="margin-top: 0px">{{ tag[0] }}</h1>
-        </div>
-        <ul>
+        <h4 class="blog-title">{{ tag[0] }}</h4>
+        <ul class="blog-list">
 			{% for post in tag[1] %}
 			<li>
 				{{ post.date | date:"%Y-%m-%d" }} --- <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
