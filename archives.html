@@ -1,11 +1,13 @@
 ---
 layout: default
+navId: archives
+title: 归档
 ---
 <div class="row">
     <div class="col-md-3">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
+                <h3 class="panel-title">归档</h3>
             </div>
             <div class="panel-body">
                 Panel content
@@ -13,6 +15,9 @@ layout: default
         </div>
     </div>
     <div class="col-md-9" role="main">
-        {{ content }}
+        <h1 style="margin-top: 0px">{{ page.title }}</h1>
+        {% for post in site.posts %}
+        * {{ post.date | date: "%Y-%m-%d" }} --- [{{ post.title }}]({{ site.baseurl}}{{ post.url }}) 
+        {% endfor %}
     </div>
 </div>

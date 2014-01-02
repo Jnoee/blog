@@ -17,8 +17,18 @@
                     </a>
                 </li>
                 <li{% if page.navId == "list" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/list">
-                        <i class="fa fa-list"></i>&nbsp;文章列表
+                    <a href="{{ site.baseurl }}/archives">
+                        <i class="fa fa-archive"></i>&nbsp;归档
+                    </a>
+                </li>
+                <li{% if page.navId == "categories" %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}/categories">
+                        <i class="fa fa-th-list"></i>&nbsp;分类
+                    </a>
+                </li>
+                <li{% if page.navId == "tags" %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}/tags">
+                        <i class="fa fa-tags"></i>&nbsp;标签
                     </a>
                 </li>
             </ul>
@@ -29,8 +39,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/Jnoee/blog/fork" target="_blank">
-                        <i class="fa fa-github"></i>&nbsp;Fork
+                    <a href="https://github.com/Jnoee/blog" target="_blank">
+                        <i class="fa fa-github"></i>&nbsp;Github
                     </a>
                 </li>
             </ul>
