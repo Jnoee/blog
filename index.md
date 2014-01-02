@@ -2,7 +2,7 @@
 layout: home
 navId: home
 ---
-#{{ site.name }}
+<h1 style="margin-top: 0px">{{ site.name }}</h1>
 {% for post in paginator.posts %}
 ###[{{ post.title }}]({{ post.url }})
 {{ post.date | date: "%Y-%m-%d" }}
