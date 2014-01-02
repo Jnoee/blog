@@ -7,7 +7,7 @@ title: 归档
     <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
             {% for tag in site.tags %}
-            <li class="active">
+            <li>
                 <a href="#{{ tag[0] }}">
                     <span class="badge pull-right">{{ tag[1].size }}</span>
                     <i class="fa fa-archive"></i>&nbsp;{{ tag[0] }}
