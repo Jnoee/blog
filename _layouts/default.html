@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        {% include header.html %}
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css" />
+        <title>
+            {% if page.title == null %}
+                {{ site.name }}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        </title>
     </head>
     <body>
-        {% include nav-main.html %}
+        {% include header.html %}
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    {% if page.navId == "home" %}
-                        {% include nav-home.html %}
-                    {% elsif page.navId == "list" %}
-                        {% include nav-list.html %}
-                    {% else %}
-                        {% include nav-view.html %}
-                    {% endif %}
-                </div>
-                <div class="col-md-9" role="main">
-                    {{ content }}
-                </div>
-            </div>
+            {{ content }}
         </div>
-        <footer>
-            <p>
-                Designed by Jnoee.
-            </p>
-        </footer>
         {% include footer.html %}
     </body>
 </html>

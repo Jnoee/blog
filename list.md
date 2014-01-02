@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 navId: list
 title: 文章列表
 ---
