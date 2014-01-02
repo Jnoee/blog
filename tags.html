@@ -10,6 +10,11 @@ title: 标签
                 <h3 class="panel-title">标签</h3>
             </div>
             <div class="panel-body">
+                <div class="list-group">
+                    {% for tag in site.tags %}
+                    <a href="#{{ tag[0] }}" class="list-group-item"><span class="badge pull-right">{{ tag[1].size }}</span>{{ tag[0] }}</a>
+                    {% endfor %}
+                </div>
                 <ul class="nav nav-pills nav-stacked">
                     {% for tag in site.tags %}
                     <li class="active">
@@ -22,5 +27,16 @@ title: 标签
     </div>
     <div class="col-md-9" role="main">
         <h1 style="margin-top: 0px">{{ page.title }}</h1>
+        <ul class="listing">
+{% for tag in site.tags %}
+  <li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
+{% for post in tag[1] %}
+  <li class="listing-item">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+{% endfor %}
+</ul>
     </div>
 </div>
