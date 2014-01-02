@@ -23,7 +23,7 @@ title: 标签
     </div>
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
-        <h4 class="blog-title">{{ tag[0] }}</h4>
+        <h2 class="blog-title">{{ tag[0] }}</h2>
         <ul class="blog-list">
 			{% for post in tag[1] %}
 			<li>
