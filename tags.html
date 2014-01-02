@@ -23,10 +23,10 @@ title: 标签
     </div>
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
-    	<table class="table">
+    	<table id="{{ tag[0] }}" class="table">
     		<thead>
     			<tr>
-    				<th><h4 id="{{ tag[0] }}">{{ tag[0] }}</h4></th>
+    				<th><h3 style="margin: 0px">{{ tag[0] }}</h3></th>
     			</tr>
     		</thead>
     		<tbody>
