@@ -2,6 +2,7 @@
 layout: home
 navId: home
 ---
+#{{ site.name }}
 {% for post in paginator.posts %}
 ###[{{ post.title }}]({{ post.url }})
 {{ post.date | date: "%Y-%m-%d" }}
