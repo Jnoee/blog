@@ -5,14 +5,20 @@ title: 分类
 ---
 <div class="row">
     <div class="col-md-3">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active">
-                <a href="#"><span class="badge pull-right">42</span>Home</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge pull-right">3</span>Messages</a>
-            </li>
-        </ul>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">分类</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    {% for category in site.categories %}
+                    <li class="active">
+                        <a href="#{{ category[0] }}"><span class="badge pull-right">{{ category[1].size }}</span>{{ category[0] }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="col-md-9" role="main">
         <h1 style="margin-top: 0px">{{ page.title }}</h1>
