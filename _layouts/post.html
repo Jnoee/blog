@@ -11,7 +11,7 @@ layout: default
     </div>
     <div class="col-md-9" role="main">
         <h1 style="margin-top: 0px">{{ page.title }}</h1>
-        <h4><small>{ page.date | date_to_string }}</small></h4>
+        <h4><small>{{ post.date | date: "%Y-%m-%d" }}</small></h4>
         <p class="text-muted">{{ page.summary }}</p>
         {{ content }}
         <ul class="pager">
