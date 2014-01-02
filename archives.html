@@ -17,7 +17,7 @@ title: 归档
         </ul>
     </div>
     <div class="col-md-9" role="main">
-        <h1 style="margin-top: 0px"><i class="fa fa-archive" />&nbsp;{{ page.title }}</h1>
+        <h1 style="margin-top: 0px">{{ page.title }}</h1>
         {% for post in site.posts %}
         * {{ post.date | date: "%Y-%m-%d" }} --- [{{ post.title }}]({{ site.baseurl}}{{ post.url }}) 
         {% endfor %}
