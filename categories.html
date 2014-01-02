@@ -7,9 +7,14 @@ title: 分类
     <div class="col-md-3">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">分类</h3>
+                <h3 class="panel-title"><i class="fa fa-th-list"></i>&nbsp;分类</h3>
             </div>
             <div class="panel-body">
+                <div class="list-group">
+                    {% for category in site.categories %}
+                    <a href="#{{ category[0] }}" class="list-group-item"><span class="badge pull-right">{{ category[1].size }}</span>{{ category[0] }}</a>
+                    {% endfor %}
+                </div>
                 <ul class="nav nav-pills nav-stacked">
                     {% for category in site.categories %}
                     <li class="active">
