@@ -5,15 +5,20 @@ title: 分类
 ---
 <div class="row">
     <div class="col-md-3">
-        <div class="panel panel-primary">
+    	<div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ page.title }}</h3>
             </div>
-            <div class="list-group">
-                {% for category in site.categories %}
-                <a href="#{{ category[0] }}" class="list-group-item"><span class="badge pull-right">{{ category[1].size }}</span>{{ category[0] }}</a>
-                {% endfor %}
-            </div>
+            <ul class="nav nav-pills nav-stacked">
+	            {% for category in site.categories %}
+	            <li>
+	                <a href="#{{ category[0] }}">
+	                    <span class="badge pull-right">{{ category[1].size }}</span>
+	                    <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
+	                </a>
+	            </li>
+	            {% endfor %}
+	        </ul>
         </div>
     </div>
     <div class="col-md-9" role="main">
