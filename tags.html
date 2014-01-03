@@ -13,12 +13,15 @@ title: 标签
             <div class="panel-heading">
                 <h4>{{ tag[0] }}</h4>
             </div>
-            <div class="list-group">
-                {% for post in tag[1] %}
-                <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
-                    {{ post.date | date:"%Y-%m-%d" }} --- {{ post.title }}
-                </a>
-                {% endfor %}
+            <div class="panel-body">
+                <ul>
+                    {% for post in tag[1] %}
+                    <li>
+                        {{ post.date | date:"%Y-%m-%d" }} --- 
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
         {% endfor %}
