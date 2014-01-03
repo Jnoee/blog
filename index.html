@@ -4,15 +4,16 @@ navId: home
 ---
 <div class="row">
     <div class="col-md-9" role="main">
-        <h1 style="margin-top: 0px">{{ site.name }}</h1>
         {% for post in paginator.posts %}
-        ###[{{ post.title }}]({{ post.url }})
-        {{ post.date | date: "%Y-%m-%d" }}
-        
-        {{ post.summary }}
-        
-        [浏览全文]({{ post.url }})
-        * * *
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                </h3>
+            </div>
+            <div class="panel-body">{{ post.summary }}</div>
+            <div class="panel-footer">{{ post.date | date: "%Y-%m-%d" }}</div>
+        </div>
         {% endfor %}
         {% if paginator.total_pages > 1 %}
         <ul class="pagination">
