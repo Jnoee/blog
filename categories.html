@@ -4,26 +4,26 @@ navId: categories
 title: 分类
 ---
 <div class="row">
+    <div class="col-md-9" role="main">
+        <div class="page-header" style="margin-top: 0px">
+        	<h1 style="margin-top: 0px">{{ page.title }}</h1>
+        </div>
+    </div>
     <div class="col-md-3">
-    	<div class="panel panel-info">
+        <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ page.title }}</h3>
             </div>
             <ul class="nav nav-pills nav-stacked">
-	            {% for category in site.categories %}
-	            <li>
-	                <a href="#{{ category[0] }}">
-	                    <span class="badge pull-right">{{ category[1].size }}</span>
-	                    <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
-	                </a>
-	            </li>
-	            {% endfor %}
-	        </ul>
-        </div>
-    </div>
-    <div class="col-md-9" role="main">
-        <div class="page-header" style="margin-top: 0px">
-        	<h1 style="margin-top: 0px">{{ page.title }}</h1>
+                {% for category in site.categories %}
+                <li>
+                    <a href="#{{ category[0] }}">
+                        <span class="badge pull-right">{{ category[1].size }}</span>
+                        <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </div>

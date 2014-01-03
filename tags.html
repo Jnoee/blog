@@ -4,23 +4,6 @@ navId: tags
 title: 标签
 ---
 <div class="row">
-    <div class="col-md-3">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{ page.title }}</h3>
-            </div>
-            <ul class="nav nav-pills nav-stacked">
-	            {% for tag in site.tags %}
-	            <li>
-	                <a href="#{{ tag[0] }}">
-	                    <span class="badge pull-right">{{ tag[1].size }}</span>
-	                    <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
-	                </a>
-	            </li>
-	            {% endfor %}
-	        </ul>
-        </div>
-    </div>
     <div class="col-md-9" role="main">
     	{% for tag in site.tags %}
         <h2 class="blog-title">{{ tag[0] }}</h2>
@@ -32,5 +15,22 @@ title: 标签
 			{% endfor %}
     	</ul>
     	{% endfor %}
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ page.title }}</h3>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                {% for tag in site.tags %}
+                <li>
+                    <a href="#{{ tag[0] }}">
+                        <span class="badge pull-right">{{ tag[1].size }}</span>
+                        <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
