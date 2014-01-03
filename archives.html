@@ -12,18 +12,20 @@ title: 归档
             {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
             {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
             {% if month != nmonth %}
-                {% if forloop.index != 1 %}</ul></div></div>{% endif %}
                 <div id="{{ post.date | date: '%Y-%m' }}" class="panel panel-default">
                     <div class="panel-heading">
                         <h4>{{ post.date | date: '%Y-%m' }}</h4>
                     </div>
                     <div class="panel-body">
                         <ul>
+                            <li>
+                                {{ post.date | date:"%Y-%m-%d" }} --- 
+                                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             {% endif %}
-            <li>
-                {{ post.date | date:"%Y-%m-%d" }} --- 
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            </li>
         {% endfor %}
     </div>
     <div class="col-md-3">

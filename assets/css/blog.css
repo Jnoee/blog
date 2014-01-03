@@ -26,4 +26,11 @@ footer {
 .panel-heading > h1, .panel-heading > h2, .panel-heading > h3, .panel-heading > h4, .panel-heading > h5, .panel-heading > h6 {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+.panel-body > ul {
+	list-style: square;
+	padding-left: 18px;
+	line-height: 30px;
 }
