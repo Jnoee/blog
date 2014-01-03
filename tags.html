@@ -5,19 +5,25 @@ title: 标签
 ---
 <div class="row">
     <div class="col-md-9" role="main">
-    	{% for tag in site.tags %}
-        <h2 class="blog-title">{{ tag[0] }}</h2>
-        <ul class="blog-list">
-			{% for post in tag[1] %}
-			<li>
-				{{ post.date | date:"%Y-%m-%d" }} --- <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-			</li>
-			{% endfor %}
-    	</ul>
-    	{% endfor %}
+        {% for tag in site.tags %}
+        <div id="{{ tag[0] }}" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ tag[0] }}</h3>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                {% for post in tag[1] %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        {{ post.date | date:"%Y-%m-%d" }} --- {{ post.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
     </div>
     <div class="col-md-3">
-        <div class="panel panel-info">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ page.title }}</h3>
             </div>
