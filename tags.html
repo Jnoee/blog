@@ -10,15 +10,13 @@ title: 标签
             <div class="panel-heading">
                 <h3 class="panel-title">{{ tag[0] }}</h3>
             </div>
-            <ul class="nav nav-pills nav-stacked">
+            <div class="list-group">
                 {% for post in tag[1] %}
-                <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}">
-                        {{ post.date | date:"%Y-%m-%d" }} --- {{ post.title }}
-                    </a>
-                </li>
+                <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
+                    {{ post.date | date:"%Y-%m-%d" }} --- {{ post.title }}
+                </a>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
         {% endfor %}
     </div>
