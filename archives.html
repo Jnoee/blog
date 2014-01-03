@@ -12,11 +12,18 @@ title: 归档
             {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
             {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
             {% if month != nmonth %}
-                {% if forloop.index != 1 %}</ul>{% endif %}
-                <h3>{{ post.date | date: '%B %Y' }}</h3><ul>
+                {% if forloop.index != 1 %}</ul></div></div>{% endif %}
+                <div id="{{ post.date | date: '%Y-%m' }}" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>{{ post.date | date: '%Y-%m' }}</h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
             {% endif %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            <time>{{ post.date | date: "%e %B %Y" }}</time>
+            <li>
+                {{ post.date | date:"%Y-%m-%d" }} --- 
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </li>
         {% endfor %}
     </div>
     <div class="col-md-3">
@@ -25,13 +32,16 @@ title: 归档
                 <h3 class="panel-title">{{ page.title }}</h3>
             </div>
             <ul class="nav nav-pills nav-stacked">
-                {% for tag in site.tags %}
-                <li>
-                    <a href="#{{ tag[0] }}">
-                        <span class="badge pull-right">{{ tag[1].size }}</span>
-                        <i class="fa fa-file"></i>&nbsp;{{ tag[0] }}
-                    </a>
-                </li>
+                {% for post in site.posts %}
+                    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+                    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+                    {% if month != nmonth %}
+                        <li>
+                            <a href="#{{ post.date | date: '%Y-%m' }}">
+                                <i class="fa fa-file"></i>&nbsp;{{ post.date | date: '%Y-%m' }}
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

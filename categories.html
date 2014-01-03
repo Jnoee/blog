@@ -15,10 +15,12 @@ title: 分类
             </div>
             <div class="panel-body">
                 <ul>
+                    {% for post in category[1] %}
                     <li>
                         {{ post.date | date:"%Y-%m-%d" }} --- 
                         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                     </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
