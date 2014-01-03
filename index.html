@@ -7,12 +7,14 @@ navId: home
         {% for post in paginator.posts %}
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <h3>
                     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                 </h3>
             </div>
             <div class="panel-body">{{ post.summary }}</div>
-            <div class="panel-footer">{{ post.date | date: "%Y-%m-%d" }}</div>
+            <div class="panel-footer">
+                <p class="text-right">{{ post.date | date: "%Y-%m-%d" }}</p>
+            </div>
         </div>
         {% endfor %}
         {% if paginator.total_pages > 1 %}
