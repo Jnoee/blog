@@ -13,7 +13,7 @@ navId: home
             </div>
             <div class="panel-body">{{ post.summary }}</div>
             <div class="panel-footer text-right">
-                {{ post.date | date: "%Y-%m-%d" }}
+                <small>{{ post.date | date: "%Y-%m-%d" }}</small>
             </div>
         </div>
         {% endfor %}
