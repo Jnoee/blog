@@ -7,27 +7,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{ site.baseurl }}" class="navbar-brand">{{ site.name }}</a>
+            <a href="{{ site.ctx }}" class="navbar-brand">{{ site.name }}</a>
         </div>
         <nav class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li{% if page.navId == "home" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/index">
+                    <a href="{{ site.ctx }}/index">
                         <i class="fa fa-home"></i>&nbsp;首页
                     </a>
                 </li>
                 <li{% if page.navId == "categories" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/categories">
+                    <a href="{{ site.ctx }}/categories">
                         <i class="fa fa-th-list"></i>&nbsp;分类
                     </a>
                 </li>
                 <li{% if page.navId == "tags" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/tags">
+                    <a href="{{ site.ctx }}/tags">
                         <i class="fa fa-tags"></i>&nbsp;标签
                     </a>
                 </li>
                 <li{% if page.navId == "about" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/about">
+                    <a href="{{ site.ctx }}/about">
                         <i class="fa fa-user"></i>&nbsp;关于
                     </a>
                 </li>

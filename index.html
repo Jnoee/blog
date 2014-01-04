@@ -8,12 +8,13 @@ navId: home
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4>
-                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <a href="{{ site.ctx }}{{ post.url }}">{{ post.title }}</a>
                 </h4>
             </div>
             <div class="panel-body">{{ post.summary }}</div>
             <div class="panel-footer text-right">
                 <small>发表时间：{{ post.date | date: "%Y-%m-%d" }}</small>
+                <span id="url::{{ site.url }}{{ site.ctx }}{{ post.url }}" class="cy_cmt_count"></span>
             </div>
         </div>
         {% endfor %}
@@ -23,7 +24,7 @@ navId: home
                 {% if page == paginator.page %}
                     <li class="active"><span>{{ page }} <span class="sr-only">(current)</span></span></li>
                 {% else %}
-                    <li><a href="{{ site.baseurl }}{%if page > 1 %}/page{{ page }}/{% endif %}">{{ page }}</a></li>
+                    <li><a href="{{ site.ctx }}{%if page > 1 %}/page{{ page }}/{% endif %}">{{ page }}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
@@ -37,7 +38,7 @@ navId: home
             <ul class="nav nav-pills nav-stacked">
                 {% for category in site.categories %}
                 <li>
-                    <a href="{{ site.baseurl }}/categories#{{ category[0] }}">
+                    <a href="{{ site.ctx }}/categories#{{ category[0] }}">
                         <span class="badge pull-right">{{ category[1].size }}</span>
                         <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
                     </a>
@@ -52,7 +53,7 @@ navId: home
             <ul class="nav nav-pills nav-stacked">
                 {% for tag in site.tags %}
                 <li>
-                    <a href="{{ site.baseurl }}/tags#{{ tag[0] }}">
+                    <a href="{{ site.ctx }}/tags#{{ tag[0] }}">
                         <span class="badge pull-right">{{ tag[1].size }}</span>
                         <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
                     </a>

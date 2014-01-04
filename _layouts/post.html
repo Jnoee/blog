@@ -9,10 +9,10 @@ layout: default
         {{ content }}
         <ul class="pager">
             {% if page.previous %}
-            <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a></li>
+            <li class="previous"><a href="{{ site.ctx }}{{ page.previous.url }}">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a></li>
             {% endif %}
             {% if page.next %}
-            <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a></li>
+            <li class="next"><a href="{{ site.ctx }}{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a></li>
             {% endif %}
         </ul>
 		<div id="SOHUCS"></div>
