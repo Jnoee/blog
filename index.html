@@ -32,27 +32,33 @@ navId: home
     <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">关于</h3>
+                <h3 class="panel-title">分类</h3>
             </div>
-            <div class="panel-body">
-            	<img src="{{ site.baseurl }}/assets/images/icon.jpg" style="width: 100%" class="img-rounded" />
-            </div>
+            <ul class="nav nav-pills nav-stacked">
+                {% for category in site.categories %}
+                <li>
+                    <a href="#{{ category[0] }}">
+                        <span class="badge pull-right">{{ category[1].size }}</span>
+                        <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">关于</h3>
+                <h3 class="panel-title">标签</h3>
             </div>
-            <div class="panel-body">
-                                    关于阿萨德路附近拉克首都基辅卡拉三季度分类
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">关于</h3>
-            </div>
-            <div class="panel-body">
-                                    关于阿萨德路附近拉克首都基辅卡拉三季度分类
-            </div>
+            <ul class="nav nav-pills nav-stacked">
+                {% for tag in site.tags %}
+                <li>
+                    <a href="#{{ tag[0] }}">
+                        <span class="badge pull-right">{{ tag[1].size }}</span>
+                        <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </div>

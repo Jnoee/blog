@@ -16,11 +16,6 @@
                         <i class="fa fa-home"></i>&nbsp;首页
                     </a>
                 </li>
-                <li{% if page.navId == "archives" %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}/archives">
-                        <i class="fa fa-archive"></i>&nbsp;归档
-                    </a>
-                </li>
                 <li{% if page.navId == "categories" %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}/categories">
                         <i class="fa fa-th-list"></i>&nbsp;分类
@@ -31,6 +26,12 @@
                         <i class="fa fa-tags"></i>&nbsp;标签
                     </a>
                 </li>
+                <li{% if page.navId == "about" %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}/about">
+                        <i class="fa fa-user"></i>&nbsp;关于
+                    </a>
+                </li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
