@@ -4,7 +4,7 @@ permalink:        pretty
 paginate:         6
 
 name:             Jnoee Blog
-url:              jnoee.github.io
+url:              http://jnoee.github.io
 ctx:              /blog
 changyan:
   appid:          cyqWoqAdU
