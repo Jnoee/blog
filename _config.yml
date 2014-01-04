@@ -12,3 +12,6 @@ exclude:
 
 # 自定义全局变量
 name:             Jnoee Blog
+changyan:
+  appid: cyqWoqAdU
+  conf: prod_1458c6647dbf7cca56dff7bfe0576ebb
