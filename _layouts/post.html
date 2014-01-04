@@ -15,6 +15,21 @@ layout: default
             <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a></li>
             {% endif %}
         </ul>
+        <div id="SOHUCS"></div>
+		<script>
+		  (function(){
+		    var appid = 'cyqWoqAdU',
+		    conf = 'prod_1458c6647dbf7cca56dff7bfe0576ebb';
+		    var doc = document,
+		    s = doc.createElement('script'),
+		    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+		    s.type = 'text/javascript';
+		    s.charset = 'utf-8';
+		    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+		    h.insertBefore(s,h.firstChild);
+		    window.SCS_NO_IFRAME = true;
+		  })()
+		</script>
     </div>
     <div class="col-md-3">
         <div class="list-group">
@@ -23,15 +38,4 @@ layout: default
             <a href="#" class="list-group-item">Link</a>
         </div>
     </div>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'jnoee';
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
