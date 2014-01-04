@@ -37,7 +37,7 @@ navId: home
             <ul class="nav nav-pills nav-stacked">
                 {% for category in site.categories %}
                 <li>
-                    <a href="#{{ category[0] }}">
+                    <a href="{{ site.baseurl }}/categories#{{ category[0] }}">
                         <span class="badge pull-right">{{ category[1].size }}</span>
                         <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
                     </a>
@@ -52,7 +52,7 @@ navId: home
             <ul class="nav nav-pills nav-stacked">
                 {% for tag in site.tags %}
                 <li>
-                    <a href="#{{ tag[0] }}">
+                    <a href="{{ site.baseurl }}/tags#{{ tag[0] }}">
                         <span class="badge pull-right">{{ tag[1].size }}</span>
                         <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
                     </a>
