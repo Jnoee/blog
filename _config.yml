@@ -3,15 +3,8 @@ markdown:         rdiscount
 pygments:         true
 permalink:        pretty
 paginate:         6
-exclude:
-- ".gitignore"
-- "CNAME"
-- "DOCS-LICENSE"
-- "LICENSE"
-- "README.md"
 
 # 自定义全局变量
 name:             Jnoee Blog
-changyan:
-  appid: cyqWoqAdU
-  conf: prod_1458c6647dbf7cca56dff7bfe0576ebb
+appid:            cyqWoqAdU
+conf:             prod_1458c6647dbf7cca56dff7bfe0576ebb
