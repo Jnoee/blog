@@ -35,7 +35,6 @@ navId: home
             <div class="panel-heading">
                 <h3 class="panel-title">分类</h3>
             </div>
-            <ul class="ds-recent-visitors" data-num-items="10"></ul>
             <ul class="nav nav-pills nav-stacked">
                 {% for category in site.categories %}
                 <li>
@@ -49,19 +48,9 @@ navId: home
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">标签</h3>
+                <h3 class="panel-title">最新评论</h3>
             </div>
             <ul class="ds-recent-comments" data-num-items="10"></ul>
-            <ul class="nav nav-pills nav-stacked">
-                {% for tag in site.tags %}
-                <li>
-                    <a href="{{ site.ctx }}/tags#{{ tag[0] }}">
-                        <span class="badge pull-right">{{ tag[1].size }}</span>
-                        <i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 </div>
