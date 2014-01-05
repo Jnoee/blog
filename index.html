@@ -14,7 +14,7 @@ navId: home
             <div class="panel-body">{{ post.summary }}</div>
             <div class="panel-footer text-right">
                 <small>发表时间：{{ post.date | date: "%Y-%m-%d" }}</small>
-                <span id="sourceId::{{ post.id }}" class="cy_cmt_count"></span>
+                <span id="sourceId::{{ post.sid }}" class="cy_cmt_count"></span>
             </div>
         </div>
         {% endfor %}
