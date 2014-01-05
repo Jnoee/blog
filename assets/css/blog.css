@@ -35,7 +35,13 @@ footer {
 	line-height: 30px;
 }
 
-.panel > .ds-recent-comments, .panel > .ds-recent-visitors, .panel > .ds-top-threads {
+.panel > .ds-recent-comments, .panel > .ds-top-threads {
 	padding-left: 5px;
 	padding-right: 5px;
+	margin-bottom: 0px;
+}
+
+.panel > .ds-recent-visitors {
+	margin-bottom: 0px;
+	padding: 5px;
 }

@@ -13,8 +13,14 @@ navId: home
             </div>
             <div class="panel-body">{{ post.excerpt }}</div>
             <div class="panel-footer text-right">
-                <small>发表时间：{{ post.date | date: "%Y-%m-%d" }}</small>
-                <span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments"></span>
+                <small>发表：{{ post.date | date: "%Y-%m-%d" }}</small>
+                <small>评论：<span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments"></span></small>
+                <small>
+                	标签：
+                	{% for tag in post.tags %}
+                    <a href="{{ site.ctx }}/tags#{{ tag[0] }}">{{ tag[0] }}</a>&nbsp;
+	                {% endfor %}
+                </small>
             </div>
         </div>
         {% endfor %}
@@ -33,18 +39,9 @@ navId: home
     <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">分类</h3>
+                <h3 class="panel-title">热评文章</h3>
             </div>
-            <ul class="nav nav-pills nav-stacked">
-                {% for category in site.categories %}
-                <li>
-                    <a href="{{ site.ctx }}/categories#{{ category[0] }}">
-                        <span class="badge pull-right">{{ category[1].size }}</span>
-                        <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+            <ul class="ds-top-threads" data-range="monthly" data-num-items="10"></ul>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
