@@ -13,12 +13,17 @@ navId: home
             </div>
             <div class="panel-body">{{ post.excerpt }}</div>
             <div class="panel-footer text-right">
-                <small>发表：{{ post.date | date: "%Y-%m-%d" }}</small>
-                <small>评论：<span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments"></span></small>
                 <small>
+                	发表：{{ post.date | date: "%Y-%m-%d" }}
+                	|
+                	分类：
+                	{% for category in post.categories %}
+                    <a href="{{ site.ctx }}/categories#{{ category }}">{{ category }}</a>&nbsp;
+	                {% endfor %}
+	                |
                 	标签：
                 	{% for tag in post.tags %}
-                    <a href="{{ site.ctx }}/tags#{{ tag[0] }}">{{ tag[0] }}</a>&nbsp;
+                    <a href="{{ site.ctx }}/tags#{{ tag }}">{{ tag }}</a>&nbsp;
 	                {% endfor %}
                 </small>
             </div>
