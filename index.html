@@ -44,9 +44,18 @@ navId: home
     <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">热评文章</h3>
+                <h3 class="panel-title">{{ page.title }}</h3>
             </div>
-            <ul class="ds-top-threads" data-range="monthly" data-num-items="10"></ul>
+            <ul class="nav nav-pills nav-stacked">
+                {% for category in site.categories %}
+                <li>
+                    <a href="{{ site.ctx }}/categories#{{ category[0] }}">
+                        <span class="badge pull-right">{{ category[1].size }}</span>
+                        <i class="fa fa-list"></i>&nbsp;{{ category[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
