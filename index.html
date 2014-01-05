@@ -14,7 +14,7 @@ navId: home
             <div class="panel-body">{{ post.excerpt }}</div>
             <div class="panel-footer text-right">
                 <small>发表时间：{{ post.date | date: "%Y-%m-%d" }}</small>
-                <span id="sourceId::{{ post.sid }}" class="cy_cmt_count"></span>
+                <span class="ds-thread-count" data-thread-key="{{ post.id }}" data-count-type="comments"></span>
             </div>
         </div>
         {% endfor %}
