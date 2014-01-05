@@ -6,6 +6,5 @@ paginate:         6
 name:             Jnoee Blog
 url:              http://jnoee.github.io
 ctx:              /blog
-changyan:
-  appid:          cyqWoqAdU
-  conf:           prod_1458c6647dbf7cca56dff7bfe0576ebb
+duoshuo:
+  domain:         jnoee
