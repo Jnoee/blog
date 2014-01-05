@@ -9,7 +9,8 @@ title: 标签
             <h1>{{ page.title }}</h1>
         </div>
         {% for tag in site.tags %}
-        <div id="{{ tag[0] }}" class="panel panel-default">
+        <section id="{{ tag[0] }}">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 <h4>{{ tag[0] }}</h4>
             </div>
@@ -24,6 +25,7 @@ title: 标签
                 </ul>
             </div>
         </div>
+        </section>
         {% endfor %}
     </div>
     <div class="col-md-3">
