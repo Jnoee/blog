@@ -10,21 +10,21 @@ title: 标签
         </div>
         {% for tag in site.tags %}
         <section id="{{ tag[0] }}">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4>{{ tag[0] }}</h4>
-            </div>
-            <div class="panel-body">
-                <ul>
-                    {% for post in tag[1] %}
-                    <li>
-                        {{ post.date | date:"%Y-%m-%d" }} --- 
-                        <a href="{{ site.ctx }}{{ post.url }}">{{ post.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4>{{ tag[0] }}</h4>
+	            </div>
+	            <div class="panel-body">
+	                <ul>
+	                    {% for post in tag[1] %}
+	                    <li>
+	                        {{ post.date | date:"%Y-%m-%d" }} --- 
+	                        <a href="{{ site.ctx }}{{ post.url }}">{{ post.title }}</a>
+	                    </li>
+	                    {% endfor %}
+	                </ul>
+	            </div>
+	        </div>
         </section>
         {% endfor %}
     </div>

@@ -9,21 +9,23 @@ title: 分类
             <h1>{{ page.title }}</h1>
         </div>
         {% for category in site.categories %}
-        <div id="{{ category[0] }}" class="panel panel-default">
-            <div class="panel-heading">
-                <h4>{{ category[0] }}</h4>
-            </div>
-            <div class="panel-body">
-                <ul>
-                    {% for post in category[1] %}
-                    <li>
-                        {{ post.date | date:"%Y-%m-%d" }} --- 
-                        <a href="{{ site.ctx }}{{ post.url }}">{{ post.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        <section id="{{ category[0] }}">
+	        <div class="panel panel-default">
+	            <div class="panel-heading">
+	                <h4>{{ category[0] }}</h4>
+	            </div>
+	            <div class="panel-body">
+	                <ul>
+	                    {% for post in category[1] %}
+	                    <li>
+	                        {{ post.date | date:"%Y-%m-%d" }} --- 
+	                        <a href="{{ site.ctx }}{{ post.url }}">{{ post.title }}</a>
+	                    </li>
+	                    {% endfor %}
+	                </ul>
+	            </div>
+	        </div>
+        </section>
         {% endfor %}
     </div>
     <div class="col-md-3">
