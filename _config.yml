@@ -1,11 +1,14 @@
 markdown:         rdiscount
 pygments:         true
-permalink:        pretty
+permalink:        /blog/:year/:month/:day/:title
 paginate:         6
 lsi:              true
 
 name:             Jnoee Blog
 url:              http://jnoee.github.io
 ctx:              /blog
+description:      Jnoee, Blog, Github, Jekyll, BootStrap, Liquid
+keywords:         Jnoee, Blog, Github, Jekyll, BootStrap, Liquid
+author:           Jnoee
 duoshuo:
   domain:         jnoee
