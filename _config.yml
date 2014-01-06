@@ -1,6 +1,6 @@
 markdown:         rdiscount
 pygments:         true
-permalink:        /blog/:year/:month/:day/:title
+permalink:        /:year/:month/:day/:title
 paginate:         6
 lsi:              true
 
