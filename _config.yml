@@ -7,8 +7,8 @@ lsi:              true
 name:             Jnoee Blog
 url:              http://jnoee.github.io
 ctx:              /blog
-description:      Jnoee, Blog, Github, Jekyll, BootStrap, Liquid
-keywords:         Jnoee, Blog, Github, Jekyll, BootStrap, Liquid
+description:      这是一个利用 Github + Jekyll + BootStrap 搭建起来的个人博客。
+keywords:         Jnoee, Blog, 博客, Github, Jekyll, BootStrap, Liquid
 author:           Jnoee
 duoshuo:
   domain:         jnoee
