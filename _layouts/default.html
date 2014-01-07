@@ -7,7 +7,7 @@
         {% if page.excerpt == null %}
         <meta name="description" content="{{ site.description }}">
         {% else %}
-        <meta name="description" content="{{ page.excerpt }}">
+        <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}">
         {% endif %}
         {% if page.keywords == null %}
         <meta name="keywords" content="{{ site.keywords }}">
