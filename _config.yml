@@ -1,14 +1,15 @@
-markdown:         rdiscount
-pygments:         true
-permalink:        /:year/:month/:day/:title
-paginate:         6
-lsi:              true
+markdown:           rdiscount
+pygments:           true
+permalink:          /:year/:month/:day/:title
+excerpt_separator:  <!-- more -->
+paginate:           6
+lsi:                true
 
-name:             Jnoee Blog
-url:              http://jnoee.github.io
-ctx:              /blog
-description:      这是一个利用 Github + Jekyll + BootStrap 搭建起来的个人博客。
-keywords:         Jnoee, Blog, 博客, Github, Jekyll, BootStrap, Liquid
-author:           Jnoee
+name:               Jnoee Blog
+url:                http://jnoee.github.io
+ctx:                /blog
+description:        这是一个利用 Github + Jekyll + BootStrap 搭建起来的个人博客。
+keywords:           Jnoee, Blog, 博客, Github, Jekyll, BootStrap, Liquid
+author:             Jnoee
 duoshuo:
-  domain:         jnoee
+  domain:           jnoee
