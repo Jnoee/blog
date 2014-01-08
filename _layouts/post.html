@@ -5,8 +5,20 @@ layout: default
     <div class="col-md-9" role="main">
         <div class="page-header">
             <h1>{{ page.title }}</h1>
+            <small>
+	        	发表于：{{ page.date | date: "%Y-%m-%d" }}
+	        	|
+	        	分类：
+	        	{% for category in page.categories %}
+	            <a href="{{ site.ctx }}/categories#{{ category }}">{{ category }}</a>&nbsp;
+	            {% endfor %}
+	            |
+	        	标签：
+	        	{% for tag in page.tags %}
+	            <a href="{{ site.ctx }}/tags#{{ tag }}">{{ tag }}</a>&nbsp;
+	            {% endfor %}
+	        </small>
         </div>
-        <h4><small>{{ page.date | date: "%Y-%m-%d" }} </small></h4>
         {{ content }}
         <ul class="pager">
             {% if page.previous %}
