@@ -24,7 +24,7 @@ layout: default
                 <h3 class="panel-title">相关文章</h3>
             </div>
             <div class="list-group">
-            	{% for post in site.related_posts limit:5 %}
+            	{% for post in site.related_posts limit:10 %}
 	            <a href="{{ site.ctx }}{{ post.url }}" class="list-group-item">{{ post.title }}</a>
 	            {% endfor %}
 	        </div>
